@@ -1,0 +1,131 @@
+/* ------------------------------------------------- *\
+   Typographie
+\* ------------------------------------------------- */
+
+@font-face {
+font-family: 'Lato';
+src: url('../fonts/lato-reg-webfont.eot');
+src: url('../fonts/lato-reg-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/lato-reg-webfont.woff') format('woff'),url('../fonts/lato-reg-webfont.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Lato';
+font-style: italic;
+src: url('../fonts/lato-regita-webfont.eot');
+src: url('../fonts/lato-regita-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/lato-regita-webfont.woff') format('woff'),url('../fonts/lato-regita-webfont.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Lato';
+font-weight: bold;
+src: url('../fonts/lato-bol-webfont.eot');
+src: url('../fonts/lato-bol-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/lato-bol-webfont.woff') format('woff'),url('../fonts/lato-bol-webfont.ttf') format('truetype');
+}
+
+body {
+	color:#555;
+	font: normal 14px/21px 'Lato',Arial,Helvetica,Sans-Serif;
+}
+
+p {
+	/*margin: 16px 0;*/
+	margin: 0 0 16px 0;
+	line-height: 21px;
+}
+
+.label {
+	font-weight: bold;
+	margin: 0 0 8px 0;
+}
+
+a {
+	color: #555;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 36px;
+	text-transform: uppercase;
+	margin: 0 0 24px 0;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 30px;
+	margin: 0 0 16px 0;
+}
+
+h3 {
+	font-weight: normal;
+	font-size: 17px;
+	line-height: 26px;
+	margin: 0 0 16px 0;
+}
+
+h3.line {
+	background: url('../img/bg-h2.png') repeat-x center left;
+}
+
+h1.dashed,
+h2.dashed,
+h3.dashed {
+	border-top: 1px dashed #a1a1a1;
+	border-bottom: 1px dashed #a1a1a1;
+}
+
+/*h3.serie {
+	clear: both;
+}*/
+
+h3.debug {
+	color: #333;
+	font-weight: bold;
+}
+
+h3 span {
+	padding: 0 8px 0 0;
+	background: #eee;
+}
+
+h3.txt-center span {
+	padding: 0 8px;
+}
+
+pre {
+    font-size: 14px;
+	color: #fff;
+	padding: 16px;
+	background: #333;
+	border-radius: 8px;
+}
+
+/* --- Media Queries --- */
+
+@media (min-width: 640px) {
+
+	h1 {
+		font-size: 30px;
+		line-height: 45px;
+		margin-bottom: 40px;
+	}
+
+	h2 {
+		font-size: 24px;
+		line-height: 36px;
+		margin: 0 0 24px 0;
+	}
+
+	h3 {
+		font-size: 18px;
+		line-height: 27px;
+		margin: 0 0 16px 0;
+	}
+
+}

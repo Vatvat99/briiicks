@@ -1,0 +1,587 @@
+/* ------------------------------------------------- *\
+   Styles génériques (communs à plusieurs pages)
+\* ------------------------------------------------- */
+
+/* --- Classes utilitaires --- */
+
+.font-size-zero {
+	font-size: 0;
+}
+
+.font-size-default {
+	font-size: 14px;
+}
+
+.center {
+	text-align: center;
+}
+
+.margin-bottom-zero {
+	margin-bottom: 0;
+}
+
+.caption {
+	font-style: italic;
+	font-weight: normal;
+}
+
+.hidden {
+	display: none;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.block {
+	display: block;
+}
+
+/* --- Boutons --- */
+
+[class*="btn-1"] {
+	font-family: 'Lato',Arial,Helvetica,Sans-Serif;
+	font-weight: normal;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin: 0;
+	background: #00a6c7;
+	border: 1px solid #007b94;
+	outline: 0;
+}
+
+[class*="btn-1"]:hover {
+	background: #11bddf;
+	cursor: pointer;
+}
+
+.btn-1-s {
+	font-size: 12px;
+	line-height: 22px;
+	padding: 6px 32px;
+}
+
+.btn-1-m {
+	font-size: 14px;
+	line-height: 22px;
+	padding: 11px 32px;
+}
+
+/* --- Tableaux --- */
+
+table.list {
+	width: 100%;
+	border-collapse: collapse;
+	border: none;
+}
+
+table.list tr.uneven td {
+	background-color: #eee;
+}
+
+table.list tr.even td {
+	background-color: #fff;
+}
+
+table.list tr.uneven td.action {
+	background: #fff;
+}
+
+table.list tr.even td.action {
+	background: #eee;
+}
+
+table.list th {
+	font-size: 14px;
+	line-height: 21px;
+	text-align: left;
+	padding: 8px 16px;
+	border: none;
+}
+
+table.list td {
+	font-size: 14px;
+	line-height: 21px;
+	padding: 7px 16px 8px 16px;
+	border: 1px solid #ccc;
+}
+
+table.list td:first-child {
+	border-left: none;
+}
+
+table.list td:last-child {
+	border-right: none;
+}
+
+table.list td.thumbnail {
+	position: relative;
+	vertical-align: top;
+	padding: 0;
+	width: 57px;
+	min-width: 57px;
+	height: 57px;
+	background: #aeaeae url('/assets/img/unknown.png') no-repeat center center;
+	overflow: hidden;
+}
+
+table.list td.thumbnail img {
+	position: absolute;
+	display: block;
+}
+
+table.list td.action {
+	width: 37px;
+	padding: 0;
+}
+
+table.list tr td.action:hover {
+	background: #00a6c7;
+	border: 1px solid #00a6c7;
+}
+
+table.list tr td.action:last-child:hover {
+	border-right: none;
+}
+
+table.list td.action span {
+	display: block;
+	width: 36px;
+	height: 36px;
+}
+
+table.list td.action span.edit {
+	background: url('/assets/img/admin/pencil-01.png') no-repeat left top;
+}
+
+table.list td.action:hover span.edit {
+	background: url('/assets/img/admin/pencil-01.png') no-repeat right top;
+}
+
+table.list td.action span.delete {
+	background: url('/assets/img/admin/close-02.png') no-repeat left top;
+}
+
+table.list td.action:hover span.delete {
+	background: url('/assets/img/admin/close-02.png') no-repeat right top;
+}
+
+/* --- Pop-up --- */
+
+.dialog {
+	display: none; /* masqué par défaut */
+	background: #fff;
+	position: absolute;
+	/*top: 50%; left: 50%;*/
+	top: 0;
+	left: 0;
+	margin-right: 16px;
+	z-index: 110;
+}
+
+.dialog .header {
+	height: auto;
+	overflow: auto;
+}
+
+.dialog .header h1 {
+	font-size: 18px;
+	line-height: 42px;
+	padding: 0 0 0 16px;
+	margin: 0;
+}
+
+.dialog .header a.close {
+	float: right;
+	display: block;
+	width: 42px;
+	height: 42px;
+	background: url('/assets/img/admin/close-03.png') no-repeat left center;
+}
+
+.dialog .header a.close:hover {
+	background-position: right center;
+}
+
+.dialog .content {
+	padding: 0 16px;
+	margin: 0;
+	overflow: auto;
+}
+
+.dialog .content h2 {
+	font-size: 18px;
+	line-height: 27px;
+}
+
+.dialog .dialog-buttons table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.dialog .dialog-buttons table,
+.dialog .dialog-buttons th,
+.dialog .dialog-buttons td {
+	border: none;
+	border-spacing: 0;
+	padding: 0;
+}
+
+.dialog .dialog-buttons td {
+	width: 50%;
+	border-top: 1px solid #cccccc;
+}
+
+.dialog .dialog-buttons td:first-child {
+	border-right: 1px solid #cccccc;
+}
+
+.dialog .dialog-buttons a {
+	display: block;
+	color: #5d6b72;
+	text-transform: uppercase;
+	line-height: 36px;
+	text-align: center;
+	width: 100%;
+}
+
+.dialog .dialog-buttons a:hover {
+	color: #fff;
+	text-decoration: none;
+	background: #00a6c7;
+}
+
+/* Gérer la position fixed pour IE6 */
+
+#overlay {
+	position: absolute;
+}
+
+.dialog {
+	position: absolute;
+}
+
+/* --- Listes (liens vers des sous-rubriques) --- */
+
+ul.pages {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.pages li {
+	display: inline-block;
+	margin: 0 32px 0 0;
+}
+
+ul.pages li a {
+	padding: 0 0 0 16px;
+	background: url('/assets/img/admin/arrow-03.png') no-repeat left 4px;
+}
+
+/* --- Pagination --- */
+
+.pagination {
+	text-align: right;
+	font-size: 0;
+}
+
+.pagination a {
+	display: inline-block;
+	padding: 0 4px;
+	border: 1px solid #ccc;
+	border-left: none;
+	font-size: 14px;
+	line-height: 32px;
+	width: 32px;
+	text-align: center;
+}
+
+.pagination a:first-child {
+	border-left: 1px solid #ccc;
+}
+
+.pagination a.current {
+	color: #fff;
+	background: #5d6b72;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+	color: #fff;
+	text-decoration: none;
+	background: #00a6c7;
+}
+
+.bottom-pagination {
+	margin: 24px 0 0 0;
+}
+
+/* --- Pages - Toutes --- */
+
+p.error {
+	color: #fff;
+	background: #fd6a6a;
+	padding: 4px 8px;
+	margin-bottom: 24px;
+	border-radius: 8px;
+}
+
+p.success {
+	color: #fff;
+	background: #7bdb46;
+	padding: 4px 8px;
+	margin-bottom: 24px;
+	border-radius: 8px;
+}
+
+/* --- Pages - Listes --- */
+
+ul.links {
+	padding: 0 0 8px 0;
+	margin: 0 0 32px 0;
+	list-style-type: none;
+	border-bottom: 1px solid #ccc;
+	overflow: auto;
+}
+
+ul.links li a {
+	color: #666;
+}
+
+ul.links li a:hover {
+	color: #00a6c7;
+	text-decoration: none;
+}
+
+ul.links li a span {
+	display: block;
+	float: left;
+	margin: 0 8px 0 0;
+}
+
+ul.links li a span.user-add,
+ul.links li a span.member-add {
+	width: 23px;
+	height: 16px;
+	background: url('/assets/img/admin/user-add-01.png') no-repeat left top;
+}
+
+ul.links li a span.minifigure-add,
+ul.links li a span.set-add,
+ul.links li a span.offer-add {
+	width: 22px;
+	height: 16px;
+	background: url('/assets/img/admin/minifig-add-01.png') no-repeat left top;
+}
+
+ul.links li a:hover span {
+	background-position: right top;
+}
+
+ul.links li.total {
+	float: right;
+}
+
+ul.links li.total span.number {
+	font-weight: bold;
+}
+
+div.delete-dialog .buttons table td {
+	width: 50%;
+}
+
+div.delete-dialog .content table {
+	width: 100%;
+	margin-bottom: 16px;
+}
+
+div.delete-dialog .content table th,
+div.delete-dialog .content table td {
+	line-height: 28px;
+}
+
+div.delete-dialog .content table th {
+	text-align: left;
+}
+
+/* --- Pages - Editions / Suppression --- */
+
+.item-box  {
+	background: #ececec;
+	margin-bottom: 16px;
+}
+
+.item-box .item,
+.item-box .number {
+	overflow: auto;
+}
+
+.item-box .action {
+	float: right;
+	background: #a1a1a1;
+	margin: 13px 8px 0 0;
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+}
+
+.item-box .action:hover {
+	cursor: pointer;
+	background: #00a6c7;
+}
+
+.item-box .action .close {
+	display: block;
+	width: 15px;
+	height: 14px;
+	margin: 8px 0 0 8px;
+	background: url('/assets/img/admin/close-04.png') no-repeat left center;
+}
+
+.item-box .action:hover .close {
+	background-position: right center;
+}
+
+.item-box img {
+	display: block;
+	float: left;
+	margin: 1px 8px 0 1px;
+}
+
+.item-box p {
+	margin: 8px 0 0 0;
+}
+
+.item-box .name {
+	font-weight: bold;
+}
+
+.item-box .number {
+	background: #cccccc;
+	padding: 8px;
+}
+
+.item-box label {
+	display: inline-block;
+	margin: 0;
+	line-height: 32px;
+}
+
+.item-box select {
+	float: right;
+	display: inline-block;
+	width: auto;
+	margin: 0;
+}
+
+div.current-picture-container {
+	position: relative;
+	overflow: hidden;
+	width: 96px;
+	height: 96px;
+	background: #aeaeae url('/assets/img/unknown.png') no-repeat center center;
+	border: 1px solid #ccc;
+}
+
+div.current-picture-container.big {
+	width: 209px;
+	height: 238px;
+}
+
+div.current-picture-container.no-picture {
+	margin-bottom: 16px;
+}
+
+div.current-picture-container img {
+	position: absolute;
+	display: block;
+}
+
+img.current-picture {
+	display: block;
+	border: 1px solid #ccc;
+}
+
+div.buttons {
+	text-align: right;
+	margin: 32px 0;
+}
+
+div.buttons a {
+	text-transform: uppercase;
+	color: #5d6b72;
+	line-height: 46px;
+	padding: 4px;
+	margin-left: 16px;
+}
+
+div.buttons a:hover {
+	color: #00a6c7;
+	text-decoration: none;
+}
+
+div.buttons a span {
+	display: inline-block;
+	margin: 0 8px 0 0;
+}
+
+div.buttons a span.cancel {
+	width: 11px;
+	height: 11px;
+	background: url('/assets/img/admin/close-01.png') no-repeat left center;
+}
+
+div.buttons a:hover span {
+	background-position: right center;
+}
+
+div.buttons button {
+	margin-left: 16px;
+}
+
+div.buttons button span {
+	display: inline-block;
+	margin: 0 8px 0 0;
+}
+
+div.buttons button span.check {
+	width: 16px;
+	height: 11px;
+	background: url('/assets/img/admin/check-01.png') no-repeat left center;
+}
+
+input.delete-picture {
+	margin: 4px 0 16px 0;
+	vertical-align: middle;
+}
+
+label.delete-picture {
+	display: inline-block;
+	vertical-align: middle;
+	font-weight: normal;
+	margin: 4px 0 16px 0;
+}
+
+/* --- Icones --- */
+
+
+
+/* --- Media Queries --- */
+
+@media (min-width: 640px) {
+
+	table.list td:first-child {
+		border-left: 1px solid #ccc;
+	}
+
+	table.list td:last-child {
+		border-right: 1px solid #ccc;
+	}
+
+	table.list tr td.action:last-child:hover {
+		border-right: 1px solid #00a6c7;
+	}
+
+}

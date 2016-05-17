@@ -1,0 +1,450 @@
+/* ------------------------------------------------- *\
+   Mise en page (structure générale)
+\* ------------------------------------------------- */
+
+* {
+	-webkit-box-sizing: border-box; /* Chrome 9 et antérieur, Safari 5 et antérieur*/
+	-moz-box-sizing: border-box; /* Firefox 28 et antérieur*/
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0 0 74px 0;
+    min-width: 320px;
+	min-height: 100%;
+	overflow: hidden;
+	background: #eee;
+}
+
+div.header {
+	position: relative;
+	z-index: 300;
+	background: #fff;
+	margin-bottom: 1px;
+	overflow: auto;
+}
+
+div.header div.logged-user,
+div.header ul.anonymous-user {
+	display: none;
+}
+
+h1.logo {
+	font-size: 20px;
+	line-height: 14px;
+	height: 60px;
+	font-weight: normal;
+	margin: 0 60px 0 0;
+	text-transform: none;
+	overflow: auto;
+}
+
+h1.logo a {
+	display: block;
+	height: 60px;
+	padding: 13px 0;
+	color: #555;
+	text-decoration: none;
+	background: #fff;
+}
+
+h1.logo a:hover {
+	color: #fff;
+	background: #e06342;
+}
+
+h1.logo span {
+	font-size: 14px;
+	font-weight: normal;
+}
+
+h1.logo span.beta {
+	display: inline-block;
+	font-size: 10px;
+	line-height: 13px;
+	text-transform: uppercase;
+	color: #fff;
+	margin-left: 8px;
+	padding: 1px 8px;
+	border-radius: 6px;
+	background: #e06342;
+	vertical-align: middle;
+}
+
+h1.logo a:hover span.beta {
+	color: #e06342;
+	background: #fff;
+}
+
+h1.logo div.head {
+	float: left;
+	width: 23px;
+	height: 28px;
+	/*margin: 2px 8px 0 26px;*/
+	margin: 2px 8px 0 12px;
+	background: url('/assets/img/logo-minifigs-01.png') no-repeat left top;
+}
+
+h1.logo a:hover div.head {
+	background: url('/assets/img/logo-minifigs-01.png') no-repeat right top;
+}
+
+button.navigation-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+	width: 61px;
+	height: 60px;
+	background: #fff;
+	border: none;
+	border-left: 1px solid #eee;
+	outline: 0;
+}
+
+button.navigation-button.active, 
+button.navigation-button:hover {
+	color: #fff;
+	background: #e06342;
+	border-left: 1px solid #e06342;
+}
+
+div.navigation {
+	position: absolute;
+	z-index: 200;
+	top: 60px;
+	bottom: 0;
+	right: -82%;
+	width: 82%;
+	background: #e06342;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+div.navigation.active {
+	right: 0;
+}
+
+div.navigation ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.navigation ul.anonymous-user,
+div.navigation ul.logged-user {
+	display: table;
+	width: 100%;
+}
+
+div.navigation ul li {
+	border-bottom: 1px solid #c54523;
+}
+
+div.navigation ul.anonymous-user li {
+	display: table-cell;
+	width: 50%;
+}
+
+div.navigation ul.logged-user li {
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 20px;
+	color: #fff;
+	background: #c54523;
+	border-bottom: none;
+}
+
+div.navigation ul.logged-user li.picture {
+	vertical-align: top;
+	width: 36px;
+}
+
+div.navigation ul.logged-user .picture-container {
+	position: relative;
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+}
+
+div.navigation ul.logged-user .picture-container img {
+	position: absolute;
+	display: block;
+}
+
+div.navigation ul.logged-user li.name .link {
+	padding: 0 8px;
+}
+
+div.navigation ul.logged-user li.logout {
+	text-align: center;
+	width: 60px;
+	border-left: 1px solid #e06342;
+}
+
+div.navigation ul.logged-user .link {
+	height: 36px;
+	line-height: 36px;
+	border-top: 1px solid #c54523;
+	border-bottom: 1px solid #c54523;
+}
+
+div.navigation ul.logged-user .link:hover {
+	background: #e06342;
+}
+
+div.navigation ul li a {
+	display: block;
+	color: #fff;
+	line-height: 20px;
+	text-decoration: none;
+}
+
+div.navigation ul.anonymous-user li a {
+	padding: 8px;
+	text-align: center;
+	background: #c54523;
+}
+
+div.navigation ul.links li a {
+	padding: 16px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+div.navigation ul.anonymous-user li a:hover {
+	background: #e06342;
+}
+
+div.navigation ul.links li a:hover {
+	background: #c54523;
+}
+
+.overlay {
+	display: none;
+	background: #333;
+	position: fixed; 
+	left: 0; 
+	top: 0;
+	width: 100%; 
+	height: 100%;
+	opacity: .50;
+	z-index: 100;
+}
+
+div.content {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 16px;
+	padding-bottom: 48px;
+	/*padding: 48px 16px;*/
+	overflow: hidden;
+	left: 0;
+}
+
+div.simple-column {
+	float: left;
+	width: 33.333333%;
+	padding: 0 16px;
+}
+
+div.double-column {
+	float: left;
+	width: 66.666666%;
+	padding: 0 16px;
+}
+
+div.footer {
+	position: absolute;
+	z-index: 10;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0 16px;
+	background: #dcdcdc;
+	border-top: 1px solid #a1a1a1;
+	overflow: auto;
+}
+
+div.footer p {
+	text-align: right;
+	margin: 12px 0;
+}
+
+div.footer ul.links {
+	text-align: right;
+	/*float: right;*/
+	list-style-type: none;
+	margin: 12px 0;
+	padding: 0;
+}
+
+div.footer ul.links li {
+	display: inline-block;
+	margin: 0 0 0 16px;
+}
+
+div.footer ul.links li a {
+	text-decoration: none;
+	padding: 0 0 0 16px;
+	background: url('/assets/img/arrow-02.png') no-repeat left center;
+}
+
+div.footer ul.links li a:hover {
+	text-decoration: underline;
+}
+
+/* --- Media Queries --- */
+
+@media (min-width: 640px) {
+
+	body {
+		padding: 0 0 46px 0;
+	}
+
+	button.navigation-button, 
+	div.navigation ul.logged-user,
+	div.navigation ul.anonymous-user {
+		display: none;
+	}
+
+	div.header div.logged-user,
+	div.header ul.anonymous-user {
+		display: block;
+	}
+
+	div.header {
+		margin-bottom: 0;
+	}
+
+	div.header h1.logo {
+		float: left;
+		width: 260px;
+		margin: 0;
+	}
+
+	div.header ul.anonymous-user {
+		float: right;
+		padding: 0;
+		margin: 22px 0 0 0;
+		list-style-type: none;
+	}
+
+	div.header ul.anonymous-user li {
+		display: inline-block;
+		margin: 0 32px 0 0;
+	}
+
+	div.header ul.anonymous-user li a {
+		text-decoration: none;
+	}
+
+	div.header ul.anonymous-user li a:hover {
+		text-decoration: underline;
+	}
+
+	div.header div.logged-user {
+		float: right;
+	}
+
+	div.header div.logged-user p {
+		margin: 0 59px 0 0;
+		padding: 10px 16px 0 0;
+		line-height: 21px;
+		text-align: right;
+	}
+
+	div.header div.logged-user div.picture-container {
+		position: relative;
+		float: right;
+		width: 60px;
+		height: 60px;
+		background: #aeaeae url('/assets/img/members/no-picture.png') no-repeat center center;
+		overflow: hidden;
+	}
+
+	div.header div.logged-user div.picture-container img {
+		display: block;
+		position: absolute;
+	}
+
+	div.header div.logged-user p a {
+		color: #555;
+		text-decoration: none;
+		font-size: 13px;
+	}
+
+	div.header div.logged-user p a:hover {
+		text-decoration: underline;
+	}
+
+	div.navigation {
+		position: relative;
+		z-index: auto;
+		width: auto;
+		top: auto;
+		left: 0;
+		bottom: auto;
+		right: auto;
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		transition: all 0.2s ease;
+	}
+
+	div.navigation div.right-lateral-header {
+		position: absolute;
+		right: -320px;
+		width: 320px;
+		height: 100%;
+		background: #c54523;
+	}
+
+	div.navigation.open {
+		left: -320px;
+	}
+
+	div.navigation ul.links {
+		border-top: 1px solid #c54523;
+	}
+
+	div.navigation ul.links li {
+		display: inline-block;
+		border-bottom: none;
+	}
+
+	div.navigation ul.links li a {
+		padding: 6px 14px;
+	}
+
+	.navigation-overlay {
+		display: none !important;
+	}
+
+	div.content {
+		padding-top: 24px;
+		padding-bottom: 64px;
+	}
+
+	div.footer p {
+		text-align: left;
+	}
+
+	div.footer ul.links {
+		float: right;
+		text-align: left;
+	}
+
+}

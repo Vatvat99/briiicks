@@ -1,0 +1,2 @@
+# PARAMETRAGE DE L'ENVIRONNEMENT [development|production]
+SetEnv ENVIRONMENT development

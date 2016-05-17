@@ -1,0 +1,65 @@
+/* ------------------------------------------------- *\
+   Typographie
+\* ------------------------------------------------- */
+
+@font-face {
+font-family: 'Lato';
+src: url('/assets/fonts/admin/lato-reg-webfont.eot');
+src: url('/assets/fonts/admin/lato-reg-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/admin/lato-reg-webfont.woff') format('woff'),url('/assets/fonts/admin/lato-reg-webfont.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'Lato';
+font-weight: bold;
+src: url('/assets/fonts/admin/lato-bol-webfont.eot');
+src: url('/assets/fonts/admin/lato-bol-webfont.eot?#iefix') format('embedded-opentype'),url('/assets/fonts/admin/lato-bol-webfont.woff') format('woff'),url('/assets/fonts/admin/lato-bol-webfont.ttf') format('truetype');
+}
+
+body {
+	color:#666;
+	font: normal 14px/21px 'Lato',Arial,Helvetica,Sans-Serif;
+}
+
+p {
+	font-size: 14px;
+	line-height: 21px;
+	/*margin: 12px 0;*/
+	margin: 0 0 12px 0;
+}
+
+ul li {
+	font-size: 14px;
+	line-height: 21px;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 54px;
+	color: #5d6b72;
+	margin: 16px 0 16px 0;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 36px;
+	color: #5d6b72;
+	margin: 16px 0 16px 0;
+}
+
+a {
+	color: #00a6c7;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+pre {
+	color: #fff;
+	padding: 16px;
+	background: #333;
+	border-radius: 8px;
+}

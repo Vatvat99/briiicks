@@ -1,0 +1,7 @@
+# URL REWRITING
+RewriteEngine On
+# réécriture de toutes les urls, à l'exception des assets et de la page index (ex: /members/profile -> index.php?page=/members/profile)
+RewriteCond $1 !^(index\.php|assets)
+RewriteRule ^(members/profile)/([0-9]+)$ index.php?page=$1&member_id=$2 [QSA,L]
+RewriteRule ^(members/contact)/([0-9]+)$ index.php?page=$1&member_id=$2 [QSA,L]
+RewriteRule ^([a-zA-Z0-9\-/_]+)$ index.php?page=$1 [QSA,L]

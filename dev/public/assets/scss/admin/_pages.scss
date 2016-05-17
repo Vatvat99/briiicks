@@ -1,0 +1,308 @@
+/* ------------------------------------------------- *\
+   Styles spécifiques à une page
+\* ------------------------------------------------- */
+
+/* --- Login --- */
+
+.login {
+	background: #eee;
+}
+
+.login div.connection {
+	display: block;
+	max-width: 320px;
+	padding: 0 16px;
+	margin: 112px auto 0 auto;
+}
+
+.login img.logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.login h1 {
+	text-align: center;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+	display: block;
+	margin: 0;
+	width: 100%;
+}
+
+.login input[type="password"] {
+	margin-top: -1px;
+}
+
+.login input[type="checkbox"] {
+	margin: 16px 8px 16px 0;
+}
+
+.login p.link {
+	margin: 0;
+}
+
+.login p.link a {
+	color: #666;
+	text-decoration: none;
+	padding: 0 0 0 12px;
+	background: url('/assets/img/admin/arrow-01.png') no-repeat left 5px;
+}
+
+.login p.link a:hover {
+	text-decoration: underline;
+}
+
+.login input[type="submit"] {
+	display: block;
+	margin: 32px auto 64px auto;
+}
+
+.login label {
+	display: inline-block;
+	font-weight: normal;
+}
+
+/* --- Home --- */
+
+.home div.minifigs {
+	overflow: auto;
+	background: #deecf3 url('/assets/img/admin/degrade-01.png') repeat-x left top;
+}
+
+.home div.minifigs h1 {
+	padding: 0 0 0 36px;
+	margin-bottom: 0;
+	background: url('/assets/img/admin/minifig-02.png') no-repeat left 8px;
+}
+
+.home div.minifigs p.description {
+	margin-top: 0;
+}
+
+.home div.minifigs p.minifigs,
+.home div.minifigs p.sets {
+	font-weight: bold;
+	margin: 32px 0;
+}
+
+.home div.minifigs p.minifigs span.number,
+.home div.minifigs p.sets span.number {
+	font-size: 72px;
+	line-height: 80px;
+	color: #39464d;
+	padding: 0 0 0 96px;
+}
+
+.home div.minifigs p.minifigs span.number {
+	background: url('/assets/img/admin/minifig-03.png') no-repeat 8px 8px;
+}
+
+.home div.minifigs p.sets span.number {
+	background: url('/assets/img/admin/set-01.png') no-repeat left 8px;
+}
+
+.home div.minifigs p.minifigs a,
+.home div.minifigs p.sets a {
+	font-weight: normal;
+}
+
+.home div.minifigs p.minifigs a span.validation-number,
+.home div.minifigs p.sets a span.validation-number {
+	font-weight: bold;
+}
+
+.home div.minifigs div.others {
+	font-weight: bold;
+	margin: 32px 0;
+}
+
+.home div.minifigs p.other {
+	vertical-align: baseline;
+	margin: 0;
+}
+
+.home div.minifigs p.other span.number {
+	font-size: 36px;
+	line-height: 48px;
+	color: #39464d;
+}
+
+.home div.rubric {
+	margin-bottom: 32px;
+}
+
+.home div.rubric h2 {
+	margin-bottom: 8px;
+}
+
+.home div.rubric h2 span.icon {
+	display: block;
+	float: left;
+	margin: 6px 8px 0 0;
+	width: 24px;
+	height: 24px;
+}
+
+.home div.rubric h2 span.pages {
+	background: url('/assets/img/admin/pages-01.png') no-repeat right top;
+}
+
+.home div.rubric h2 span.blocs {
+	background: url('/assets/img/admin/blocs-01.png') no-repeat right top;
+}
+
+.home div.rubric h2 span.files {
+	background: url('/assets/img/admin/files-01.png') no-repeat right top;
+}
+
+.home div.rubric h2 span.parameters {
+	background: url('/assets/img/admin/parameters-01.png') no-repeat right top;
+}
+
+.home div.rubric p.description {
+	margin-top: 0;
+}
+
+.home div.rubric ul.links {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.home div.rubric ul.links li a {
+	padding: 0 0 0 16px;
+	background: url('/assets/img/admin/arrow-03.png') no-repeat left 4px;
+}
+
+/* --- Users --- */
+
+.users table.list th.email,
+.users table.list td.email {
+	display: none;
+}
+
+/* --- Minifigures --- */
+
+.minifigures table.list th.range,
+.minifigures table.list th.serie,
+.minifigures table.list th.sets,
+.minifigures table.list td.range,
+.minifigures table.list td.serie,
+.minifigures table.list td.sets {
+	display: none;
+}
+
+/* --- Sets --- */
+
+.sets table.list th.number,
+.sets table.list th.release-year,
+.sets table.list th.price,
+.sets table.list td.number,
+.sets table.list td.release-year,
+.sets table.list td.price {
+	display: none;
+}
+
+/* --- Series --- */
+
+.series table.list th.range-name,
+.series table.list td.range-name {
+	display: none;
+}
+
+/* --- Series - Add --- */
+
+.series-add select#range {
+	margin-bottom: 8px;
+}
+
+/* --- Series - Edit --- */
+
+.series-edit select#range {
+	margin-bottom: 8px;
+}
+
+/* --- Offers --- */
+
+.offers table.list th.author,
+.offers table.list th.type,
+.offers table.list th.status,
+.offers table.list td.author,
+.offers table.list td.type,
+.offers table.list td.status {
+	display: none;
+}
+
+/* --- Members --- */
+
+.members table.list th.email,
+.members table.list th.registration-date,
+.members table.list td.email,
+.members table.list td.registration-date {
+	display: none;
+}
+
+
+/* --- Media Queries --- */
+
+@media (min-width: 640px) {
+
+	/* --- Users --- */
+
+	.users table.list th.email,
+	.users table.list td.email {
+		display: table-cell;
+	}
+
+	/* --- Minifigures --- */
+
+	.minifigures table.list th.range,
+	.minifigures table.list th.serie,
+	.minifigures table.list th.sets,
+	.minifigures table.list td.range,
+	.minifigures table.list td.serie,
+	.minifigures table.list td.sets {
+		display: table-cell;
+	}
+
+	/* --- Sets --- */
+
+	.sets table.list th.number,
+	.sets table.list th.release-year,
+	.sets table.list th.price,
+	.sets table.list td.number,
+	.sets table.list td.release-year,
+	.sets table.list td.price {
+		display: table-cell;
+	}
+
+	/* --- Series --- */
+
+	.series table.list th.range-name,
+	.series table.list td.range-name {
+		display: table-cell;
+	}
+
+	/* --- Offers --- */
+
+	.offers table.list th.author,
+	.offers table.list th.type,
+	.offers table.list th.status,
+	.offers table.list td.author,
+	.offers table.list td.type,
+	.offers table.list td.status {
+		display: table-cell;
+	}
+
+	/* --- Members --- */
+
+	.members table.list th.email,
+	.members table.list th.registration-date,
+	.members table.list td.email,
+	.members table.list td.registration-date {
+		display: table-cell;
+	}
+
+}

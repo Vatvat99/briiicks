@@ -1,0 +1,1 @@
+$(document).ready(function(){$("input#email").focusin(function(){"Adresse e-mail du membre"==$(this).val()&&$(this).val("")}),$("input#email").focusout(function(){""==$(this).val()&&$(this).val("Adresse e-mail du membre")})});

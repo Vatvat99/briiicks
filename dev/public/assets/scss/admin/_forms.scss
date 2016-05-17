@@ -1,0 +1,67 @@
+/* ------------------------------------------------- *\
+   Formulaires
+\* ------------------------------------------------- */
+
+label {
+	display: block;
+	font-weight: bold;
+	margin: 0 0 8px 0;
+}
+
+label span.error {
+	font-weight: normal;
+	color: #fd6a6a;
+}
+
+input[type='text'],
+input[type="password"],
+select {
+	display: block;
+	margin: 8px 0 16px 0;
+	width: 100%;
+	font: normal 14px 'Lato',Arial,Helvetica,Sans-Serif;
+	color: #888;
+	line-height: 18px;
+	padding: 8px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+input[type='text']:hover,
+input[type="password"]:hover,
+select {
+	color: #666;
+}
+
+input[type='checkbox'] {
+	margin: 0;
+}
+
+/* input type="file" personnalisé */
+
+.input-file-container {  
+	position: relative;
+	width: 100%;
+	margin: 8px 0 16px 0;
+}
+
+.input-file-container input[type="file"] {  
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 36px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+}
+
+.input-file-container button {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.input-file-container input[type="text"] {
+	margin: 0;
+}
